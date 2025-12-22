@@ -342,19 +342,19 @@ sudo netfilter-persistent save
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的配置文件与 Clash 有何区别？</h5></div>
+    <div class="panel-body">
+        Sing-box 的配置使用 JSON 格式，而 Clash 采用 YAML 格式。前者更适合程序自动解析，后者更便于人工编辑。Sing-box 在性能和扩展性上有明显优势，支持更细粒度的流量控制。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁地区的优势？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改和流量特征泄露，降低被 DPI 检测风险。在高封锁地区使用，可保证节点长期稳定可用，同时提升数据传输安全性和访问可靠性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
     <div class="panel-body">
         QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
-    <div class="panel-body">
-        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟？</h5></div>
-    <div class="panel-body">
-        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点延迟和健康状态自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟和稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的混淆参数该如何填写？</h5></div>
@@ -362,14 +362,14 @@ sudo netfilter-persistent save
         SSR 混淆参数位于节点配置中，通常选择如 tls1.2_ticket_auth 或 http_simple。参数字段可以自定义伪装主机或路径，以模拟正常流量行为，从而提高隐蔽性和抗封锁能力。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 支持节点分类管理吗？</h5></div>
-    <div class="panel-body">
-        支持。用户可将节点按地区、用途或延迟分类，结合策略组和规则进行分流。这样可以快速选择最佳节点，提高访问效率并便于维护大量节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 节点延迟检测如何帮助分流？</h5></div>
     <div class="panel-body">
         Clash 会定期测试节点延迟，并结合策略组自动选择最优节点处理流量。避免访问高延迟或失效节点，提高网页浏览、视频播放和游戏速度及稳定性，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 支持节点分类管理吗？</h5></div>
+    <div class="panel-body">
+        支持。用户可将节点按地区、用途或延迟分类，结合策略组和规则进行分流。这样可以快速选择最佳节点，提高访问效率并便于维护大量节点。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 如何在 Windows 上加速游戏？</h5></div>
@@ -382,14 +382,14 @@ sudo netfilter-persistent save
         PAC 模式可根据规则文件动态判断流量是否走代理。适合访问国内外混合网站环境，无需手动切换节点，程序自动分流，提高网络访问效率和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的配置文件与 Clash 有何区别？</h5></div>
+    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟？</h5></div>
     <div class="panel-body">
-        Sing-box 的配置使用 JSON 格式，而 Clash 采用 YAML 格式。前者更适合程序自动解析，后者更便于人工编辑。Sing-box 在性能和扩展性上有明显优势，支持更细粒度的流量控制。<hr />    </div>
+        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点延迟和健康状态自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟和稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁地区的优势？</h5></div>
+    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改和流量特征泄露，降低被 DPI 检测风险。在高封锁地区使用，可保证节点长期稳定可用，同时提升数据传输安全性和访问可靠性。    </div>
+        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -419,16 +419,16 @@ sudo netfilter-persistent save
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-9-node-share.htm" title="Free VPN App | 11月9日20.8M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅链接">Free VPN App | 11月9日20.8M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-30-node-share-links.htm" title="Free VPN App | 11月30日21.4M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点订阅链接">Free VPN App | 11月30日21.4M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-11-free-vpn-node.htm" title="Free VPN App | 12月11日20.7M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接">Free VPN App | 12月11日20.7M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-14-vpn-proxy.htm" title="Free VPN App | 12月14日22M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅链接">Free VPN App | 12月14日22M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-21-node-share-links.htm" title="Free VPN App | 11月21日22.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅链接">Free VPN App | 11月21日22.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-2-top-vpn-node.htm" title="Free VPN App | 12月2日21.7M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点订阅链接">Free VPN App | 12月2日21.7M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-27-top-vpn.htm" title="Free VPN App | 11月27日22.7M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅链接">Free VPN App | 11月27日22.7M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-26-node-share-links.htm" title="Free VPN App | 11月26日21.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点订阅链接">Free VPN App | 11月26日21.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-6-vpn-proxy.htm" title="Free VPN App | 12月6日20.7M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接">Free VPN App | 12月6日20.7M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-vpn-free.htm" title="Free VPN App | 11月7日22.1M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅链接">Free VPN App | 11月7日22.1M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-21-node-share-links.htm" title="Free VPN App | 11月21日22.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅链接">Free VPN App | 11月21日22.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-15-free-node-subscribe-links.htm" title="Free VPN App | 11月15日19M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅链接">Free VPN App | 11月15日19M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-7-vpn-github.htm" title="Free VPN App | 12月7日22.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅链接">Free VPN App | 12月7日22.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-18-vpn-proxy.htm" title="Free VPN App | 12月18日22.2M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点订阅链接">Free VPN App | 12月18日22.2M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-18-node-share-links.htm" title="Free VPN App | 11月18日21.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅链接">Free VPN App | 11月18日21.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-vpn-proxy.htm" title="Free VPN App | 11月19日20.1M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅链接">Free VPN App | 11月19日20.1M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="Free VPN App | 11月14日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点订阅链接">Free VPN App | 11月14日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -440,7 +440,7 @@ sudo netfilter-persistent save
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
