@@ -257,29 +257,9 @@ sudo ufw allow 你的V2Ray端口/tcp
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多策略组有什么作用？</h5></div>
-    <div class="panel-body">
-        多策略组可以将节点按用途、延迟或地域分类，结合路由规则实现自动分流。不同类型流量可走不同节点，提升访问速度和稳定性，特别适合多应用使用场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
     <div class="panel-body">
         Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
-    <div class="panel-body">
-        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-Go 的多路复用（mux）如何开启？</h5></div>
-    <div class="panel-body">
-        Trojan-Go 在配置文件中通过启用 mux 参数即可实现多路复用。此功能允许多个连接共享同一隧道，减少握手延迟并提升整体传输效率，尤其在移动网络中表现出色。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名如何正确配置？</h5></div>
-    <div class="panel-body">
-        伪装域名必须真实可访问且证书有效，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-go 如何启用 WebSocket 支持？</h5></div>
@@ -287,9 +267,14 @@ sudo ufw allow 你的V2Ray端口/tcp
         在配置文件中将 transport 参数设置为 websocket，并指定 path 路径。客户端需同步使用相同路径及主机名。这样可将 Trojan 流量伪装为普通 WebSocket 通信以提升隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的 MITM 功能如何使用？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 是否支持自定义 DNS 解析？</h5></div>
     <div class="panel-body">
-        QuantumultX 的 MITM（中间人）功能可拦截 HTTPS 流量，用于修改或分析请求与响应。开启时需安装客户端生成的根证书，确保能正确解析加密数据。<hr />    </div>
+        支持。用户可以在配置中指定 DNS 服务器或启用 DoH/DoT 功能，确保域名解析安全和快速，避免本地 DNS 污染或被劫持。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
+    <div class="panel-body">
+        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 可以与 Shadowsocks 等客户端同时使用吗？</h5></div>
@@ -297,14 +282,29 @@ sudo ufw allow 你的V2Ray端口/tcp
         可以。Nekobox 配置独立，与 Shadowsocks、Clash 等客户端互不干扰。用户可根据需要通过策略组选择节点，实现灵活的网络管理和分流策略。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的伪装域名如何正确配置？</h5></div>
+    <div class="panel-body">
+        伪装域名必须真实可访问且证书有效，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多策略组有什么作用？</h5></div>
+    <div class="panel-body">
+        多策略组可以将节点按用途、延迟或地域分类，结合路由规则实现自动分流。不同类型流量可走不同节点，提升访问速度和稳定性，特别适合多应用使用场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的 MITM 功能如何使用？</h5></div>
+    <div class="panel-body">
+        QuantumultX 的 MITM（中间人）功能可拦截 HTTPS 流量，用于修改或分析请求与响应。开启时需安装客户端生成的根证书，确保能正确解析加密数据。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 是否可以代理局域网设备？</h5></div>
     <div class="panel-body">
         可以。Netch 支持启用局域网共享功能，使同一网络下的其他设备通过主机的代理访问外网。需确保防火墙允许入站连接，且代理端口在局域网中开放。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持自定义 DNS 解析？</h5></div>
+    <div class="panel-heading"><h5>Trojan-Go 的多路复用（mux）如何开启？</h5></div>
     <div class="panel-body">
-        支持。用户可以在配置中指定 DNS 服务器或启用 DoH/DoT 功能，确保域名解析安全和快速，避免本地 DNS 污染或被劫持。    </div>
+        Trojan-Go 在配置文件中通过启用 mux 参数即可实现多路复用。此功能允许多个连接共享同一隧道，减少握手延迟并提升整体传输效率，尤其在移动网络中表现出色。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -334,16 +334,16 @@ sudo ufw allow 你的V2Ray端口/tcp
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-21-free-node-subscribe-links.htm" title="Free VPN App | 4月21日20.1M/S|免费V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点订阅链接">Free VPN App | 4月21日20.1M/S|免费V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-7-top-vpn.htm" title="Free VPN App | 5月7日18.1M/S|免费Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅链接">Free VPN App | 5月7日18.1M/S|免费Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-vpn-github.htm" title="Free VPN App | 4月15日19.2M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接">Free VPN App | 4月15日19.2M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-27-free-vpn-node.htm" title="Free VPN App | 4月27日20.7M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点订阅链接">Free VPN App | 4月27日20.7M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-mianfei-vpn.htm" title="Free VPN App | 4月20日22.9M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点订阅链接">Free VPN App | 4月20日22.9M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-30-node-share.htm" title="Free VPN App | 4月30日20.9M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点订阅链接">Free VPN App | 4月30日20.9M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-6-node-share.htm" title="Free VPN App | 5月6日18.8M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点订阅链接">Free VPN App | 5月6日18.8M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-25-top-vpn.htm" title="Free VPN App | 4月25日20.8M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点订阅链接">Free VPN App | 4月25日20.8M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-11-node-share.htm" title="Free VPN App | 4月11日21M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点订阅链接">Free VPN App | 4月11日21M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-vpn-node.htm" title="Free VPN App | 4月12日18.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接">Free VPN App | 4月12日18.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-node-share.htm" title="Free VPN App | 4月18日22M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅链接">Free VPN App | 4月18日22M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-11-vpn-proxy.htm" title="Free VPN App | 5月11日20.1M/S|免费Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点订阅链接">Free VPN App | 5月11日20.1M/S|免费Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-26-share-vpn.htm" title="Free VPN App | 4月26日19.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点订阅链接">Free VPN App | 4月26日19.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-17-node-share-links.htm" title="Free VPN App | 4月17日19.3M/S|免费Clash节点/Trojan节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接">Free VPN App | 4月17日19.3M/S|免费Clash节点/Trojan节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-28-free-vpn-node.htm" title="Free VPN App | 4月28日18.2M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接">Free VPN App | 4月28日18.2M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-13-mianfei-vpn.htm" title="Free VPN App | 4月13日22.3M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点订阅链接">Free VPN App | 4月13日22.3M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-9-vpn-github.htm" title="Free VPN App | 4月9日18.2M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点订阅链接">Free VPN App | 4月9日18.2M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -355,10 +355,10 @@ sudo ufw allow 你的V2Ray端口/tcp
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
