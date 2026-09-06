@@ -391,24 +391,14 @@ A4：可能未安装TUN驱动或驱动权限不足。建议重新安装，并以
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的连接失败常见原因有哪些？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。<hr />    </div>
+        Trojan 连接失败可能由于伪装域名错误、TLS 证书过期、防火墙阻挡端口或服务器不可达。通过查看客户端日志可以定位具体原因，并对症下药解决问题。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
+    <div class="panel-heading"><h5>Netch 无法代理游戏怎么办？</h5></div>
     <div class="panel-body">
-        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
-    <div class="panel-body">
-        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
+        若 Netch 无法代理游戏，需检查游戏进程是否被正确捕获，以及防火墙是否阻止了 TUN 模式。可尝试以管理员身份运行程序，或切换为 Socks 模式重新导入节点。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 使用透明代理时如何避免 DNS 泄露？</h5></div>
@@ -416,9 +406,9 @@ A4：可能未安装TUN驱动或驱动权限不足。建议重新安装，并以
         在 Mellow 中启用 fake-ip 或内置 DNS 解析功能，并将上游 DNS 指定为 DoH/DoT 服务，确保所有 DNS 请求通过代理转发而非本地解析，从而避免 ISP 或本地网络捕获实际访问域名。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的自动测速功能如何设置？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
     <div class="panel-body">
-        Clash 支持定期测速节点延迟，用户可以设置测速频率和超时时间。测速结果会影响策略组的节点选择，从而自动切换至最优节点，提高访问速度和连接稳定性。<hr />    </div>
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 如何导入 URL 格式的订阅？</h5></div>
@@ -426,19 +416,29 @@ A4：可能未安装TUN驱动或驱动权限不足。建议重新安装，并以
         在 Potatso Lite 的配置页点击“导入”，粘贴订阅链接并确认导入。系统会自动解析节点列表，可在主界面查看并选择不同线路。部分机场支持一键导入格式，省去手动配置步骤。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的连接失败常见原因有哪些？</h5></div>
-    <div class="panel-body">
-        Trojan 连接失败可能由于伪装域名错误、TLS 证书过期、防火墙阻挡端口或服务器不可达。通过查看客户端日志可以定位具体原因，并对症下药解决问题。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的主要特点是什么？</h5></div>
     <div class="panel-body">
         WinXray 是一款基于 V2Ray 核心的 Windows 客户端，界面直观，支持 VMess、VLess、Trojan、Shadowsocks 等多协议。它提供一键导入订阅、节点测速、自动分流等功能，是适合初学者和进阶用户的图形化代理工具。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 无法代理游戏怎么办？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
     <div class="panel-body">
-        若 Netch 无法代理游戏，需检查游戏进程是否被正确捕获，以及防火墙是否阻止了 TUN 模式。可尝试以管理员身份运行程序，或切换为 Socks 模式重新导入节点。    </div>
+        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
+    <div class="panel-body">
+        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的自动测速功能如何设置？</h5></div>
+    <div class="panel-body">
+        Clash 支持定期测速节点延迟，用户可以设置测速频率和超时时间。测速结果会影响策略组的节点选择，从而自动切换至最优节点，提高访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 使用 AEAD 加密对安全性有何帮助？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性，同时降低被检测的风险。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -487,16 +487,16 @@ A4：可能未安装TUN驱动或驱动权限不足。建议重新安装，并以
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-8-7.htm" title="Free VPN App | 8月7日23M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点订阅链接">Free VPN App | 8月7日23M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-19-node-share-links.htm" title="Free VPN App | 7月19日18.8M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点订阅链接">Free VPN App | 7月19日18.8M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-27-vpn-github.htm" title="Free VPN App | 7月27日19M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点订阅链接">Free VPN App | 7月27日19M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-24-vpn-node.htm" title="Free VPN App | 7月24日18.6M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅链接">Free VPN App | 7月24日18.6M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-8-23.htm" title="Free VPN App | 8月23日22.7M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点订阅链接">Free VPN App | 8月23日22.7M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-vpn-node.htm" title="Free VPN App | 8月12日19.7M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点/V2ray节点订阅链接">Free VPN App | 8月12日19.7M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点/V2ray节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-node-share.htm" title="Free VPN App | 8月6日22.3M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅链接">Free VPN App | 8月6日22.3M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-8-29.htm" title="Free VPN App | 8月29日20.6M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点订阅链接">Free VPN App | 8月29日20.6M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-27.htm" title="Free VPN App | 8月27日18M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接">Free VPN App | 8月27日18M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-8-19.htm" title="Free VPN App | 8月19日19.1M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/SSR节点订阅链接">Free VPN App | 8月19日19.1M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/SSR节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-9.htm" title="Free VPN App | 8月9日20.2M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅链接">Free VPN App | 8月9日20.2M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-vpn-node.htm" title="Free VPN App | 8月20日18.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅链接">Free VPN App | 8月20日18.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-30-free-vpn-node.htm" title="Free VPN App | 8月30日19.2M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点订阅链接">Free VPN App | 8月30日19.2M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-top-vpn-node.htm" title="Free VPN App | 8月14日21M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点订阅链接">Free VPN App | 8月14日21M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-22-top-vpn-node.htm" title="Free VPN App | 8月22日18.1M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点订阅链接">Free VPN App | 8月22日18.1M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点订阅链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-8-17.htm" title="Free VPN App | 8月17日18.5M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点订阅链接">Free VPN App | 8月17日18.5M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-vpn-node.htm" title="Free VPN App | 8月16日20.5M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅链接">Free VPN App | 8月16日20.5M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-8-3.htm" title="Free VPN App | 8月3日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点订阅链接">Free VPN App | 8月3日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-top-vpn-node.htm" title="Free VPN App | 8月24日18.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点订阅链接">Free VPN App | 8月24日18.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点订阅链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -508,10 +508,10 @@ A4：可能未安装TUN驱动或驱动权限不足。建议重新安装，并以
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>

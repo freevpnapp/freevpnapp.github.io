@@ -1,4 +1,4 @@
-# Free VPN App | 8月30日19.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点订阅链接  更新时间 2026-08-30 10:14:25
+# Free VPN App | 9月6日21.2M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅链接  更新时间 2026-09-06 01:08:48
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freevpnapp.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freevpnapp.github.io/uploads/2026/08/0-20260830.yaml
-- https://freevpnapp.github.io/uploads/2026/08/1-20260830.yaml
-- https://freevpnapp.github.io/uploads/2026/08/2-20260830.yaml
-- https://freevpnapp.github.io/uploads/2026/08/3-20260830.yaml
-- https://freevpnapp.github.io/uploads/2026/08/4-20260830.yaml
+- https://freevpnapp.github.io/uploads/2026/09/0-20260906.yaml
+- https://freevpnapp.github.io/uploads/2026/09/1-20260906.yaml
+- https://freevpnapp.github.io/uploads/2026/09/2-20260906.yaml
+- https://freevpnapp.github.io/uploads/2026/09/3-20260906.yaml
+- https://freevpnapp.github.io/uploads/2026/09/4-20260906.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freevpnapp.github.io/uploads/2026/08/0-20260830.txt
-- https://freevpnapp.github.io/uploads/2026/08/1-20260830.txt
-- https://freevpnapp.github.io/uploads/2026/08/2-20260830.txt
-- https://freevpnapp.github.io/uploads/2026/08/3-20260830.txt
-- https://freevpnapp.github.io/uploads/2026/08/4-20260830.txt
+- https://freevpnapp.github.io/uploads/2026/09/0-20260906.txt
+- https://freevpnapp.github.io/uploads/2026/09/1-20260906.txt
+- https://freevpnapp.github.io/uploads/2026/09/2-20260906.txt
+- https://freevpnapp.github.io/uploads/2026/09/3-20260906.txt
+- https://freevpnapp.github.io/uploads/2026/09/4-20260906.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freevpnapp.github.io/uploads/2026/08/20260830.json
+- https://freevpnapp.github.io/uploads/2026/09/20260906.json
 
 ## 更多Clash节点订阅 ：
 
